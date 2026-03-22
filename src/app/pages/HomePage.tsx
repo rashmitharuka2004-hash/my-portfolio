@@ -42,16 +42,16 @@ export function HomePage() {
               </h1>
             </motion.div>
 
-            <div className="text-gray-700 dark:text-gray-300 min-h-[60px]">
+            <div className="text-gray-700 dark:text-gray-300 min-h-[60px] text-2xl font-semibold">
               <TypeAnimation
                 sequence={[
                   'Full Stack Software Engineer',
                   2000,
-                  'Laravel Developer',
+                  'Laravel & React Specialist',
                   2000,
-                  'React Specialist',
+                  'Mobile App Developer',
                   2000,
-                  'Content Creator',
+                  'UI/UX Designer',
                   2000,
                 ]}
                 wrapper="span"
@@ -80,12 +80,12 @@ export function HomePage() {
               <Button onClick={() => scrollToSection('projects')}>
                 View My Work
               </Button>
-              <Button
-                variant="outline"
-                onClick={() => window.open('#', '_blank')}
-              >
-                Download Resume
-              </Button>
+              {/* Functional Resume Download Link */}
+              <a href="/Tharuka_Jayaweera.pdf" download="Tharuka_Jayaweera.pdf">
+                <Button variant="outline">
+                  Download Resume
+                </Button>
+              </a>
             </motion.div>
 
             <motion.div

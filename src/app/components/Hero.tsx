@@ -1,13 +1,18 @@
 import { motion } from 'motion/react';
 import { TypeAnimation } from 'react-type-animation';
 import { FaChevronDown } from 'react-icons/fa';
-import { Button } from './Button';
-import { SocialIcons } from './SocialIcons';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { Button } from '../Button';
+import { SocialIcons } from '../SocialIcons';
+import { ImageWithFallback } from '../figma/ImageWithFallback';
+import profileImg from '../../../assets/myphoto.png';
 
 export function Hero() {
   const scrollToAbout = () => {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const scrollToProjects = () => {
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -24,21 +29,21 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-gray-900 dark:text-white"
+            className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white"
           >
-            Hi, I'm <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Your Name</span>
+            Hi, I'm <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Tharuka Jayaweera</span>
           </motion.h1>
           
-          <div className="text-gray-700 dark:text-gray-300">
+          <div className="text-2xl font-semibold text-gray-700 dark:text-gray-300">
             <TypeAnimation
               sequence={[
                 'Full Stack Developer',
                 2000,
-                'React Specialist',
+                'Laravel & React Specialist',
                 2000,
-                'Mobile App Developer',
+                'Android App Developer',
                 2000,
-                'UI/UX Enthusiast',
+                'UI/UX Designer',
                 2000,
               ]}
               wrapper="span"
@@ -53,8 +58,8 @@ export function Hero() {
             transition={{ delay: 0.4 }}
             className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed"
           >
-            Passionate about creating beautiful, functional, and user-friendly web applications.
-            Specializing in React, Laravel, and modern web technologies.
+            Full Stack Software Engineer and Content Creator passionate about building 
+            digital experiences. Specializing in Laravel, React, and modern web technologies.
           </motion.p>
 
           <motion.div
@@ -63,10 +68,13 @@ export function Hero() {
             transition={{ delay: 0.6 }}
             className="flex gap-4 flex-wrap"
           >
-            <Button onClick={scrollToAbout}>View My Work</Button>
-            <Button variant="outline" onClick={() => window.open('#', '_blank')}>
-              Download Resume
-            </Button>
+            <Button onClick={scrollToProjects}>View My Work</Button>
+            {/* Functional CV Link */}
+            <a href="/Tharuka_Jayaweera.pdf" download="Tharuka_Jayaweera.pdf">
+              <Button variant="outline">
+                Download Resume
+              </Button>
+            </a>
           </motion.div>
 
           <motion.div
@@ -98,8 +106,8 @@ export function Hero() {
               className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full blur-3xl opacity-30"
             />
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1737575655055-e3967cbefd03?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXIlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NzI3MTYzNTl8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="Profile"
+              src={profileImg}
+              alt="Tharuka Jayaweera Profile"
               className="relative rounded-full w-full aspect-square object-cover border-8 border-white dark:border-gray-800 shadow-2xl"
             />
           </div>
