@@ -71,21 +71,21 @@ export function AboutSection({ preview = false }: AboutSectionProps) {
             </h3>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
               I'm Tharuka Jayaweera, a passionate Full Stack Software Engineer and Content Creator 
-              dedicated to building digital experiences that make a difference. With expertise in 
-              modern web technologies, I specialize in creating scalable, user-friendly applications.
+              dedicated to building digital experiences that make a difference[cite: 1, 6]. With expertise in 
+              modern web technologies, I specialize in creating scalable, user-friendly applications[cite: 7].
             </p>
             {!preview && (
               <>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  My technical stack includes Laravel, React, JavaScript, PHP, MySQL, and Android development. 
+                  My technical stack includes Laravel, React, JavaScript, PHP, MySQL, and Android development[cite: 10, 11, 43]. 
                   I focus on writing clean, maintainable code and delivering solutions that exceed expectations. 
                   Whether it's building e-commerce platforms, management systems, or web applications, I bring 
-                  creativity and technical expertise to every project.
+                  creativity and technical expertise to every project[cite: 48, 50, 52, 53].
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                   Beyond coding, I'm passionate about sharing knowledge and helping others grow in their 
                   development journey. I continuously learn new technologies and best practices to stay 
-                  at the forefront of web development.
+                  at the forefront of web development[cite: 8].
                 </p>
               </>
             )}
@@ -93,10 +93,12 @@ export function AboutSection({ preview = false }: AboutSectionProps) {
               {preview ? (
                 <Button onClick={() => navigate('/about')}>View More</Button>
               ) : (
-                <Button variant="primary" onClick={() => window.open('#', '_blank')}>
-                  <FaDownload className="inline mr-2" />
-                  Download CV
-                </Button>
+                <a href="/Tharuka_Jayaweera.pdf" download="Tharuka_Jayaweera.pdf">
+                  <Button variant="primary">
+                    <FaDownload className="inline mr-2" />
+                    Download CV
+                  </Button>
+                </a>
               )}
             </div>
           </motion.div>
