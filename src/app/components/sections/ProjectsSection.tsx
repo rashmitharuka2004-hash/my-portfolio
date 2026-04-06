@@ -5,6 +5,7 @@ import { Button } from '../Button';
 import { Card } from '../Card';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 
+
 interface ProjectsSectionProps {
   preview?: boolean;
 }
@@ -42,6 +43,14 @@ export function ProjectsSection({ preview = false }: ProjectsSectionProps) {
       techStack: ['Java', 'MySQL', 'JavaFX'],
       githubUrl: 'https://github.com/rashmitharuka2004-hash/BakeSoft-Bakery-POS-System',
     },
+    {
+  title: 'Travel Ra Full System',
+  description: 'Android + Admin panel + Firebase backend',
+  image: '/travelra.png', // your screenshot
+  techStack: ['Android', 'React', 'Firebase'],
+  githubUrl: 'https://github.com/rashmitharuka2004-hash/travel-ra-android-app',
+  liveUrl: 'https://f0jr1mbayqtphb2i.public.blob.vercel-storage.com/WhatsApp%20Video%202026-04-06%20at%2018.35.45.mp4',
+}
   ];
 
   const displayProjects = preview ? projects.slice(0, 3) : projects;

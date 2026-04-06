@@ -12,6 +12,7 @@ interface Project {
   techStack: string[];
   githubUrl: string;
   liveUrl?: string;
+  extraLinks?: { label: string; url: string }[]; // <-- ADD THIS
 }
 
 export function ProjectsPage() {
@@ -82,6 +83,30 @@ export function ProjectsPage() {
       techStack: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
       githubUrl: 'https://github.com/rashmitharuka2004-hash/Bloom-E-commerce-Fashion-Store',
     },
+    {
+  title: 'Travel Ra – Full Stack Taxi & Tour System',
+  description: 'Android app + Admin dashboard + Firebase backend',
+  longDescription:
+    'Travel Ra is a full-stack system consisting of an Android mobile application, a React admin dashboard, and Firebase backend. Users can browse tours, book taxis, and calculate fares in real-time. Admin panel allows managing bookings, users, and vehicles efficiently.',
+  image: '/travelra.png',
+  techStack: ['Java', 'Android', 'React', 'TypeScript', 'Firebase'],
+  githubUrl: 'https://github.com/rashmitharuka2004-hash/travel-ra-android-app',
+  liveUrl: 'https://f0jr1mbayqtphb2i.public.blob.vercel-storage.com/WhatsApp%20Video%202026-04-06%20at%2018.35.45.mp4',
+  extraLinks: [
+    {
+      label: 'Admin Panel',
+      url: 'https://github.com/rashmitharuka2004-hash/TravelRa-Admin',
+    },
+    {
+      label: 'Firebase Backend',
+      url: 'https://github.com/rashmitharuka2004-hash/travel-ra-firebase-backend',
+    },
+    {
+      label: 'Demo Video',
+      url: 'https://f0jr1mbayqtphb2i.public.blob.vercel-storage.com/WhatsApp%20Video%202026-04-06%20at%2018.35.45.mp4',
+    },
+  ],
+}
   ];
 
   return (
@@ -242,6 +267,20 @@ export function ProjectsPage() {
                       </a>
                     )}
                   </div>
+                  {selectedProject.extraLinks && (
+  <div className="flex flex-wrap gap-3 mt-4">
+    {selectedProject.extraLinks.map((link, i) => (
+      <a
+        key={i}
+        href={link.url}
+        target="_blank"
+        className="px-4 py-2 bg-purple-600 text-white rounded-lg text-sm hover:bg-purple-700"
+      >
+        {link.label}
+      </a>
+    ))}
+  </div>
+)}
                 </div>
               </motion.div>
             </motion.div>
