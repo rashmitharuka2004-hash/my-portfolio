@@ -81,7 +81,7 @@ export function HomePage() {
                 View My Work
               </Button>
               {/* Functional Resume Download Link */}
-              <a href="/Tharuka_Jayaweera.pdf" download="Tharuka_Jayaweera.pdf">
+              <a href="/Rashmi_Tharuka.pdf" download="Rashmi_Tharuka.pdf">
                 <Button variant="outline">
                   Download Resume
                 </Button>

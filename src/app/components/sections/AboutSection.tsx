@@ -93,7 +93,7 @@ export function AboutSection({ preview = false }: AboutSectionProps) {
               {preview ? (
                 <Button onClick={() => navigate('/about')}>View More</Button>
               ) : (
-                <a href="/Tharuka_Jayaweera.pdf" download="Tharuka_Jayaweera.pdf">
+                <a href="/Rashmi_Tharuka.pdf" download="Rashmi_Tharuka.pdf">
                   <Button variant="primary">
                     <FaDownload className="inline mr-2" />
                     Download CV
